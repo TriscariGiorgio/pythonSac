@@ -22,7 +22,7 @@ if __name__ == '__main__':
         lavoro varchar(255) NOT NULL,
         provincia VARCHAR(255),
         domicilio VARCHAR(11) NOT NULL,
-        fascia_eta VAARCHAR(255)
+        fascia_eta VARCHAR(255)
     );
     """)
     esegui_query(connection, """
@@ -75,7 +75,7 @@ if __name__ == '__main__':
        """)
 
 
-    with open(r"C:\Users\Giorgio\OneDrive\Desktop\DAITV_pulito_1.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\pythonSac\DAITV_pulito_1.csv", encoding="iso-8859-1") as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)
         reader = list(reader)
@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
     inserisci_dati(connection, "film", lista_film, lista_campi_film)
 
-    with open(r"C:\pythonSac\UTENTI_NUOVO.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\pythonSac\UTENTI_NUOVO.csv", encoding="iso-8859-1") as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)
         reader = list(reader)
@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 
 
-    with open(r"C:\pythonSac\ratings_edit.csv", encoding="utf-8") as f:
+    with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\pythonSac\ratings_edit.csv", encoding="utf-8") as f:
         reader = csv.reader(f, delimiter=",")
         next(reader)
         reader = list(reader)
