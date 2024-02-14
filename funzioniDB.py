@@ -71,6 +71,16 @@ def read_query(connection, query):
     except Error as err:
         print(f"Error: '{err}'")
 
+def read_query_many(connection, query,dati):
+    cursor = connection.cursor()
+    result = None
+    try:
+        cursor.executemany(query,dati)
+        result = cursor.fetchall()
+        return result
+    except Error as err:
+        print(f"Error: '{err}'")
+
 
 def esegui_query_many(connection, query, dati):
     cursor = connection.cursor()
