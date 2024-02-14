@@ -8,7 +8,7 @@ if __name__ == '__main__':
     connection = create_db_connection("localhost", "root", pw, db)
 
 
-    with open(r"C:\pythonSac\DAITV_pulito_1.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\pythonSac\DAITV_pulito_1.csv", encoding="iso-8859-1") as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)
         reader = list(reader)
