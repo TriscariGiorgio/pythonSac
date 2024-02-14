@@ -105,3 +105,16 @@ pw = ""
 db = "DAITV"
 
 connection = create_db_connection("localhost", "root", pw, db)
+
+with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\ratings_edit.csv", encoding="utf-8") as f:
+    reader = csv.reader(f, delimiter=",")
+    next(reader)
+    reader = list(reader)
+
+lista_campi_film_rating = ["utente_id", "film_id", "Valutazione", "Data_valutazione"]
+lista_film_rating = []
+
+for i in range(len(reader)):
+    lista_film_rating.append((reader[i][0], reader[i][1], reader[i][2], reader[i][3]))
+
+inserisci_dati(connection, "rating", lista_film_rating, lista_campi_film_rating)
