@@ -20,7 +20,7 @@ if __name__ == '__main__':
         eta int (10) NOT NULL,
         sesso char(1) check(sesso='M' OR sesso='F'),
         lavoro varchar(255) NOT NULL,
-        domicilio INT(11) NOT NULL
+        domicilio VARCHAR(11) NOT NULL
     );
     """)
     esegui_query(connection, """
@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
     inserisci_dati(connection, "film", lista_film, lista_campi_film)
 
-    with open(r"C:\Users\Giorgio\OneDrive\Desktop\users_edit.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\pythonSac\users_edit.csv", encoding="iso-8859-1") as f:
         reader = csv.reader(f, delimiter=",")
         next(reader)
         reader = list(reader)
@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 
 
-    with open(r"C:\Users\Riccardo\Desktop\DAITASHARE\SAC\pythonProject\sac\ratings_edit.csv", encoding="utf-8") as f:
+    with open(r"C:\pythonSac\ratings_edit.csv", encoding="utf-8") as f:
         reader = csv.reader(f, delimiter=",")
         next(reader)
         reader = list(reader)
