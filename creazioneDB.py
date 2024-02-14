@@ -101,7 +101,3 @@ if __name__ == '__main__':
 
     inserisci_dati(connection, "utenti", lista_utenti, lista_campi_utente)
 
-pw = ""
-db = "DAITV"
-
-connection = create_db_connection("localhost", "root", pw, db)
