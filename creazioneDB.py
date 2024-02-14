@@ -22,7 +22,7 @@ if __name__ == '__main__':
         lavoro varchar(255) NOT NULL,
         provincia VARCHAR(255),
         domicilio VARCHAR(11) NOT NULL,
-        fascia_eta VAARCHAR(255)
+        fascia_eta VARCHAR(255)
     );
     """)
     esegui_query(connection, """
