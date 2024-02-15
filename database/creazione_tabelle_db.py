@@ -1,4 +1,4 @@
-from connessioni import *
+from database.connessioni import *
 
 
 def crea_tabelle_sql(filesql):
