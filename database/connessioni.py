@@ -1,5 +1,5 @@
-from funzioniDB import *
-from config import *
+from database.funzioniDB import *
+from database.config import *
 
 def crea_db():
     connection = create_server_connection(DB_HOST, DB_USER, DB_PASSWORD)
