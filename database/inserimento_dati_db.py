@@ -1,11 +1,11 @@
 import csv
 
-from connessioni import *
+from database.connessioni import *
 
 def insersci_dati_da_csv():
     connection=crea_connessione_db()
 
-    with open(r"/dati/DAITV_pulito_1.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\Users\lapia\OneDrive\Desktop\ESERCIZIO GIORGIO\pythonSac\dati\DAITV_pulito_1.csv") as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)
         reader = list(reader)
@@ -18,7 +18,7 @@ def insersci_dati_da_csv():
 
     inserisci_dati(connection, "film", lista_film, lista_campi_film)
 
-    with open(r"/dati/UTENTI_NUOVO.csv", encoding="iso-8859-1") as f:
+    with open(r"C:\Users\lapia\OneDrive\Desktop\ESERCIZIO GIORGIO\pythonSac\dati\UTENTI_NUOVO.csv", encoding="iso-8859-1") as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)
         reader = list(reader)
@@ -32,7 +32,7 @@ def insersci_dati_da_csv():
     inserisci_dati(connection, "utenti", lista_utenti, lista_campi_utente)
 
 
-    with open(r"/dati/ratings_edit.csv", encoding="utf-8") as f:
+    with open(r"C:\Users\lapia\OneDrive\Desktop\ESERCIZIO GIORGIO\pythonSac\dati\ratings_edit.csv", encoding="utf-8") as f:
         reader = csv.reader(f, delimiter=",")
         next(reader)
         reader = list(reader)
