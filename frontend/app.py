@@ -97,6 +97,9 @@ def filter_film():
     num_pages = 18  # Placeholder, replace with actual calculation
     return render_template('tutti_film.html', tutti=tutti, page=page, num_pages=num_pages, order_direction=order_direction)
 
+@app.route('/grafici')
+def grafici_tot():
+    return render_template('Grafici.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
