@@ -67,7 +67,7 @@ def show_film():
     page = request.args.get('page', default=1, type=int)
     tutti = get_data_film_val()
     num_pages = 18  # Placeholder, replace with actual calculation
-    return render_template('film.html', tutti=tutti, page=page, num_pages=num_pages)
+    return render_template('tutti_film.html', tutti=tutti, page=page, num_pages=num_pages)
 
 @app.route('/data/tutti/film', methods=['GET'])
 def get_tutti_film(page=1, order_direction='asc'):
